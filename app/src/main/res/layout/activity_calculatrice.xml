@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".controller.CalculatriceActivity">
+
+
+
+    <!-- Affiche 0 au lancement -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:text="@string/_zero"
+        android:textSize="40sp"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:ellipsize="start"
+        android:maxLines="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#BBBBBB"
+        android:textSize="18sp"
+        android:gravity="end"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <GridLayout
+        android:id="@+id/gridButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:rowOrderPreserved="false"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="center" >
+        <!-- Ligne 1 -->
+        <Button
+            android:id="@+id/btnOn"
+            style="@style/CalcOrangeButton"
+            android:text="@string/on"
+            android:textColor="#616161" />
+        <Button android:id="@+id/btnOff"  android:text="@string/off" style="@style/CalcOrangeButton"/>
+        <Button android:id="@+id/btnAC"   android:text="@string/ac"  style="@style/CalcOrangeButton"/>
+        <Button android:id="@+id/btnDiv"  android:text="@string/division"   style="@style/CalcOrangeButton"/>
+
+        <!-- Ligne 2 -->
+        <Button android:id="@+id/btn7"    android:text="@string/_7"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn8"    android:text="@string/_8"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn9"    android:text="@string/_9"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btnMul"  android:text="@string/x"   style="@style/CalcOrangeButton"/>
+
+        <!-- Ligne 3 -->
+        <Button android:id="@+id/btn4"     android:text="@string/_4"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn5"     android:text="@string/_5"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn6"     android:text="@string/_6"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btnMinus" android:text="@string/soustraction"   style="@style/CalcOrangeButton"/>
+
+        <!-- Ligne 4 -->
+        <Button android:id="@+id/btn1"    android:text="@string/_1"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn2"    android:text="@string/_2"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btn3"    android:text="@string/_3"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btnPlus" android:text="@string/addition"   style="@style/CalcOrangeButton"/>
+
+        <!-- Ligne 5 -->
+        <Button android:id="@+id/btnDel"  android:text="@string/del" style="@style/CalcOrangeButton"/>
+        <Button android:id="@+id/btn0"    android:text="@string/_0"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btnDot"  android:text="@string/virgule"   style="@style/CalcWhiteButton"/>
+        <Button android:id="@+id/btnEq"   android:text="@string/egal"   style="@style/CalcOrangeButton"/>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
